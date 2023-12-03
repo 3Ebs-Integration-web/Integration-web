@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { AuthProvider } from './components/AuthContext';
 import Navbare from './components/Navbar';
 import App from './App';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import Inscirpition from './pages/Inscirpition';
 import Contact from './pages/Contact';
@@ -14,48 +14,24 @@ import Payemen from './pages/paye';
 import Signup from './signup';
 import Login from './login';
 
-const router = createBrowserRouter([
-  {
-    path: '/Inscirpition',
-    element: <Signup />,
-  },
-  {
-    path: '/Connexion',
-    element: <Login />,
-  },
-  {
-    path: '/',
-    element: <App />,
-  },
-  {
-    path: '/Payemen',
-    element: <Payemen />,
-  },
-  {
-    path: '/App',
-    element: <App />,
-  },
-  {
-    path: '/about',
-    element: <AutoLayoutExample />,
-  },
-  {
-    path: '/Contact',
-    element: <Contact />,
-  },
-  {
-    path: '/products',
-    element: <Products />,
-  },
-]);
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AuthProvider>
-      <Navbare />
-      <RouterProvider router={router} />
-      <Footer />
+      <Router>
+        <Navbare />
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/Inscirpition" element={<Signup />} />
+          <Route path="/Connexion" element={<Login />} />
+          <Route path="/Payemen" element={<Payemen />} />
+          <Route path="/App" element={<App />} />
+          <Route path="/about" element={<AutoLayoutExample />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/products" element={<Products />} />
+        </Routes>
+        <Footer />
+      </Router>
     </AuthProvider>
   </React.StrictMode>,
 );
