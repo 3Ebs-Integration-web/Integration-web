@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="@drawable/img_2"
+tools:context=".MainActivity">
+
+<RadioGroup
+    android:id="@+id/roleRadioGroup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true">
+
+    <RadioButton
+        android:id="@+id/enseignantRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enseignant" />
+
+    <RadioButton
+        android:id="@+id/étudiantRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="étudiant" />
+</RadioGroup>
+
+<Button
+    android:id="@+id/confirm_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/roleRadioGroup"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="16dp"
+    android:textColor="@color/black"
+    android:text="confirmer l'identité " />
+
+</RelativeLayout>
+
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/absence.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/img_2">
+    <EditText
+        android:id="@+id/nomEtudiant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="Nom de l'étudiant"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nomEtudiant"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonAbsent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonPresent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonAjouterAbsence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajouter Absence"
+        android:layout_below="@id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/nombreAbsences"
+        android:layout_width="wrap_content"
+        android:layout_height="117dp"
+        android:layout_below="@id/buttonAjouterAbsence"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+
+    <TextView
+        android:id="@+id/retour"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:text=" Retour! " />
+</RelativeLayout>
+
+
+
